@@ -1,0 +1,16 @@
+{
+  "name": "node_sample",
+  "version": "1.0.0",
+  "description": "node_sample",
+  "main": "index.js",
+  "dependencies": {
+    "nodemon": "^2.0.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jmnuqui",
+  "license": "ISC"
+}
