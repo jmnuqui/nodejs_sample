@@ -1,4 +1,4 @@
-// const Person = require('./person');
+const Person = require('./person');
 //
 // (new Person('John Doe', 30)).greetings();
 //
@@ -6,12 +6,13 @@
 //
 // console.log(path)
 
-const fs = require('fs');
-const path  = require('path');
+const fs = require('fs'); // fs => file system
+const path  = require('path'); //
 const os = require('os');
 const url = require('url');
 const EventEmitter = require('events');
 const http = require('http');
+//---
 
 //--create file
 // fs.writeFile(
@@ -33,9 +34,9 @@ const http = require('http');
 //   }
 // )
 
-//--Read file
+// // --Read file
 // fs.readFile(
-//   path.join(__dirname, '/test', 'hello.txt'),
+//   path.join(__dirname, '/public', 'hello.html'),
 //   'utf-8', (err, data) => {
 //     if (err) throw err;
 //     console.log(data)
@@ -118,13 +119,73 @@ const http = require('http');
 
 
 // //Create a Server
-let server = http.createServer((req, res) => {
-  if(req.url == "/"){
-    res.write('<h1>Home</h1>');
-  } else if(req.url == "/about") {
-    res.write('<h1>About</h1>');
-  }
-  console.log("current url: " + req.url);
-  res.end();
-});
-server.listen(5000, () => console.log("zxc"));
+// const server = http.createServer((request, result) => {
+  // if(request.url === "/") {
+  //   result.writeHead(200, {'Content-Type': 'application/json'});
+  //   const users = [
+  //     {name: 'Bob Smith', age: 40},
+  //     {name: 'John Doe', age: 30},
+  //   ];
+  //   result.end(JSON.stringify(users));
+  //   // console.table(users);
+  //   // result.end((new Person('Jeremiah', 20)).greetings());
+  //   result.end("<h2>Home</h2>");
+  // } else if (request.url == "/about") {
+  //   result.writeHead(200, {'Content-Type': 'text/html'});
+  //   fs.readFile(
+  //     path.join(__dirname, '/public', 'hello.html'),
+  //     'utf-8', (err, data) => {
+  //       result.write(data);
+  //       result.end();
+  //     }
+  //   );
+  // }
+//   let filePath = path.join(__dirname, 'public', request.url === '/' ? 'index.html' : request.url);
+//
+//   let extname = path.extname(filePath);
+//
+//   let contentType = 'text/html';
+//
+//   switch (extname) {
+//     case '.js':
+//       contentType = 'text/javascript';
+//       break;
+//     case '.css':
+//       contentType = 'text/css';
+//       break;
+//     case '.json':
+//       contentType = 'application/json';
+//       break;
+//     case '.png':
+//       contentType = 'image/png';
+//       break;
+//     case '.jpg':
+//       contentType = 'image/jpg';
+//       break;
+//   }
+//   fs.readFile(filePath, (err, content) => {
+//     if(err) {
+//       if(err.code == 'ENOENT') { // Page not found
+//         fs.readFile(path.join(__dirname, 'public', '404.html'),
+//         (err1, content1) => {
+//           result.writeHead(200, {'Content-Type': 'text/html'});
+//           result.end(content1, 'utf-8');
+//         });
+//       } else { // Some Server error
+//         result.writeHead(500);
+//         result.end(`Server Error: ${err.code}`);
+//       }
+//     } else { // Success
+//       result.writeHead(200, {'Content-Type': contentType});
+//       result.end(content, 'utf-8');
+//     }
+//   })
+//
+//   result.writeHead(200, {'Content-Type': contentType});
+//   console.log(`Current Url: ${request.url}`);
+// });
+//
+// const PORT = process.env.PORT || 5000;
+// server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+//-----------

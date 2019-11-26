@@ -4,12 +4,14 @@
   "description": "node_sample",
   "main": "index.js",
   "dependencies": {
+    "mysql": "^2.17.1",
     "nodemon": "^2.0.1",
     "uuid": "^3.3.3"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node",
+    "dev": "nodemon"
   },
   "author": "jmnuqui",
   "license": "ISC"
